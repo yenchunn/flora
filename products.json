@@ -1,0 +1,60 @@
+{
+  "plants": [
+    {
+      "id": "monstera",                    
+      "name": "龜背芋",                    
+      "price": 680,                        
+      "image": "images/龜背芋.png",        
+      "emoji": "🌿",                       
+      "spec": "中型盆栽",                  
+      "category": "plants",                
+      "description": "適合室內養護的熱帶植物", 
+      "stock": 15,                        
+      "featured": true                     
+    },
+    {
+      "id": "cactus-set",
+      "name": "仙人掌組合",
+      "price": 450,
+      "image": "",                        
+      "emoji": "🌵",
+      "spec": "三入組合",
+      "category": "plants",
+      "description": "低維護的沙漠植物",
+      "stock": 20,
+      "featured": true
+    }
+
+  ],
+  
+  "soil": [
+    {
+      "id": "potting-mix",
+      "name": "專業培養土",
+      "price": 180,
+      "image": "",
+      "emoji": "🌱",
+      "spec": "5L裝",
+      "category": "soil",
+      "description": "適合多種植物的通用介質",
+      "stock": 50,
+      "featured": false                  
+    }
+  ],
+  
+  "tools": [
+    {
+      "id": "watering-can",
+      "name": "長嘴澆水壺",
+      "price": 380,
+      "image": "",
+      "emoji": "🚿",
+      "spec": "1.5L容量",
+      "category": "tools",
+      "description": "精準澆水不灑落",
+      "stock": 20,
+      "featured": false
+    }
+  ]
+}
+  
