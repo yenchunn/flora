@@ -626,11 +626,29 @@ area {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  width: 80%;
+  max-width: 600px;
+  max-height: 80vh;
+
   background: #fff;
-  padding: 20px;
-  width: 300px;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+  padding: 24px;
+  box-sizing: border-box;
+
+  overflow: hidden; /* ⭐ 重要：不讓內容撐爆外框 */
+  z-index: 1001;
 }
+
+.modal-content {
+  max-height: 60vh;
+  overflow-y: auto;
+  margin-top: 12px;
+  padding-right: 8px;
+}
+
 
 .policy-img {
   width: 100%;
