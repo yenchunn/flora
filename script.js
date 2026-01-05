@@ -232,8 +232,6 @@ function openModal(type) {
   else if (type === "terms") {
     title.innerText = "服務條款";
     content.innerHTML = `
-      <img src="images/policy/terms1.jpg" class="policy-img">
-      <img src="images/policy/terms2.jpg" class="policy-img">
       <p>
         使用本網站即表示您同意遵守本平台之所有使用規範，
         如有違反，本網站有權限制或終止相關服務。
