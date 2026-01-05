@@ -35,3 +35,53 @@ let currentIndex = 0;
     // 監聽圖片載入與視窗縮放
     window.addEventListener('load', rwdImageMap);
     window.addEventListener('resize', rwdImageMap);
+
+let currentIndex = 0;
+let autoPlayInterval = null;
+
+// 切換幻燈片
+function moveSlide(step) {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-indicators .dot');
+    
+    if (slides.length === 0) return;
+
+    // 移除當前 active
+    slides[currentIndex].classList.remove('active');
+    if (dots[currentIndex]) {
+        dots[currentIndex].classList.remove('active');
+    }
+    
+    // 計算新索引
+    currentIndex = (currentIndex + step + slides.length) % slides.length;
+    
+    // 加入新 active
+    slides[currentIndex].classList.add('active');
+    if (dots[currentIndex]) {
+        dots[currentIndex].classList.add('active');
+    }
+    
+    // 重新調整圖片地圖
+    rwdImageMap();
+}
+
+// 自動輪播
+function startAutoPlay() {
+    // 清除舊的定時器（避免重複）
+    if (autoPlayInterval) {
+        clearInterval(autoPlayInterval);
+    }
+    
+    // 每 5 秒自動切換到下一張
+    autoPlayInterval = setInterval(() => {
+        moveSlide(1);
+    }, 5000); // 5000ms = 5秒
+}
+
+// 停止自動輪播
+function stopAutoPlay() {
+    if (autoPlayInterval) {
+        clearInterval(autoPlayInterval);
+        autoPlayInterval = null;
+    }
+}
