@@ -46,59 +46,91 @@
             .mini-card { flex: 0 0 calc((100% - 20px) / 2); }
         }
 
-        .write-review-box {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border: 1px solid #eee;
-        }
-        
-        .write-review-box h4 {
-            margin-top: 0;
-            margin-bottom: 15px;
-            color: #333;
-            font-size: 1.1rem;
-        }
-        
-        .form-group {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-        
-        #new-review-name, #new-review-rating {
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        
-        #new-review-name {
-            flex: 1; /* 名字欄位佔據剩餘空間 */
-        }
-        
-        #new-review-text {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            resize: vertical; /* 允許垂直拉伸 */
-            margin-bottom: 10px;
-            box-sizing: border-box; /* 確保 padding 不會讓框框爆掉 */
-            font-family: inherit;
-        }
-        
-        .submit-review-btn {
-            background-color: #333; /* 與你的加入購物車按鈕同色系 */
-            color: white;
-            border: none;
-            padding: 8px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: background 0.3s;
-        }
-        
-        .submit-review-btn:hover {
-            background-color: #555;
-        }
+        /* --- Flora 評論區塊風格 --- */
+.write-review-box {
+    background-color: #ffffff; /* 改成白色底 */
+    padding: 25px;
+    border-radius: 12px; /* 圓潤一點 */
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* 淡淡的陰影，增加立體感 */
+}
+
+.review-title {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.review-inputs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* 輸入框美化 */
+.flora-input, .flora-select, .flora-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* 圓角 */
+    background-color: #fafafa;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* 當滑鼠點擊輸入框時，邊框變綠色 */
+.flora-input:focus, .flora-select:focus, .flora-textarea:focus {
+    border-color: #4a6741; /* 品牌綠 */
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(74, 103, 65, 0.1);
+}
+
+.flora-input {
+    flex: 1;
+}
+
+.select-wrapper {
+    position: relative;
+    min-width: 150px;
+}
+
+.flora-textarea {
+    resize: vertical;
+    min-height: 80px;
+    margin-bottom: 15px;
+}
+
+/* 按鈕美化 */
+.submit-review-btn {
+    background-color: #4a6741; /* 這裡設定深綠色 */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px; /* 膠囊狀按鈕 */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background 0.3s, transform 0.2s;
+    display: block;
+    margin-left: auto; /* 讓按鈕靠右對齊 */
+}
+
+.submit-review-btn:hover {
+    background-color: #3b5234; /* 滑鼠移上去變深一點 */
+    transform: translateY(-2px); /* 微微浮起 */
+}
+
+.submit-review-btn:active {
+    transform: translateY(0);
+}
+
+/* 新增評論的淡入動畫 */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
