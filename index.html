@@ -13,54 +13,56 @@
     <!-- Header -->
     <header>
         <div class="header-container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="images/LOGO.png" alt="FLORA">
             </a>
             <nav>
-    <ul>
-        <li>
-            <a href="#">植物養護</a>
-            <ul class="dropdown-menu">
-                <li><a href="product%20page/plant.html">植物</a></li>
-                <li><a href="product%20page/soil.html">介質肥料</a></li>
-                <li><a href="product%20page/tools.html">工具</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">風格裝飾</a>
-            <ul class="dropdown-menu">
-                <li><a href="product%20page/containers.html">盆器</a></li>
-                <li><a href="product%20page/homedecor.html">家居擺飾</a></li>
-                <li><a href="product%20page/accessories.html">療癒小物</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">專屬企劃</a>
-            <ul class="dropdown-menu">
-                <li><a href="product%20page/sets.html">組合套裝</a></li>
-                <li><a href="product%20page/beginners.html">新手推薦</a></li>
-                <li><a href="product%20page/seasonal.html">季節限定</a></li>
-            </ul>
-        </li>
-        <li><a href="about.html">關於我們</a></li>
-        <li><a href="QA.html">常見問題</a></li>
-    </ul>
-</nav>
-<div class="header-icons">
-    <div class="user-menu-container">
-        <span class="user-icon">👤</span>
-        <ul class="user-dropdown">
-            <li><a href="login.html">登入 / 註冊</a></li>
-            <li><a href="member.html">會員中心</a></li>
-        </ul>
-    </div>
-    <a href="cart.html" style="color: inherit; text-decoration: none;">
-        <span>🛒</span>
-    </a>
-</div>
+                <ul>
+                    <li>
+                        <a href="#">植物養護</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="product%20page/plant.html">植物</a></li>
+                            <li><a href="product%20page/soil.html">介質肥料</a></li>
+                            <li><a href="product%20page/tools.html">工具</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">風格裝飾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="product%20page/containers.html">盆器</a></li>
+                            <li><a href="product%20page/homedecor.html">家居擺飾</a></li>
+                            <li><a href="product%20page/accessories.html">療癒小物</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">專屬企劃</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="product%20page/sets.html">組合套裝</a></li>
+                            <li><a href="product%20page/beginners.html">新手推薦</a></li>
+                            <li><a href="product%20page/seasonal.html">季節限定</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">關於我們</a></li>
+                    <li><a href="QA.html">常見問題</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <div class="user-menu-container">
+                    <span class="user-icon">👤</span>
+                    <ul class="user-dropdown">
+                        <li><a href="login.html">登入 / 註冊</a></li>
+                        <li><a href="member.html">會員中心</a></li>
+                    </ul>
+                </div>
+                <!-- ✅ 修正：加入購物車徽章 -->
+                <a href="cart.html" style="color: inherit; text-decoration: none; position: relative;">
+                    <span>🛒</span>
+                    <span class="cart-badge" style="display: none;">0</span>
+                </a>
+            </div>
+        </div>
     </header>   
 
- 
     <!-- Hero Section - 輪播廣告 -->
     <section class="hero">
         <div class="carousel-container">
@@ -94,7 +96,7 @@
                 </div>
             </div>
             
-            <!-- 指示點（可選） -->
+            <!-- 指示點 -->
             <div class="carousel-indicators">
                 <span class="dot active" onclick="currentIndex = 0; moveSlide(0);"></span>
                 <span class="dot" onclick="currentIndex = 1; moveSlide(0);"></span>
@@ -111,8 +113,8 @@
         </div>
     </section>
 
-
-   <section id="plants" class="featured">
+    <!-- 商品區 -->
+    <section id="plants" class="featured">
         <div class="featured-container">
             <h2 class="section-title">本月精選</h2>
             <div class="product-grid">
@@ -136,7 +138,6 @@
                         <div class="product-price">NT$ 1,200</div>
                     </div>
                 </div>
-
 
                 <div class="product-card" onclick="location.href='product page/product detail/productplant.html?id=sansevieria';" style="cursor: pointer;">
                     <div class="product-image">
@@ -163,6 +164,9 @@
             </div>
         </div>
     </footer>
+    
+    <!-- ✅ 修正：正確的載入順序，不要重複 -->
+    <script src="cart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
