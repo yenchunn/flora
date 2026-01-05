@@ -45,3 +45,60 @@
             .reviews-list { grid-template-columns: 1fr; }
             .mini-card { flex: 0 0 calc((100% - 20px) / 2); }
         }
+
+        .write-review-box {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+        }
+        
+        .write-review-box h4 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1.1rem;
+        }
+        
+        .form-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        #new-review-name, #new-review-rating {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        #new-review-name {
+            flex: 1; /* 名字欄位佔據剩餘空間 */
+        }
+        
+        #new-review-text {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: vertical; /* 允許垂直拉伸 */
+            margin-bottom: 10px;
+            box-sizing: border-box; /* 確保 padding 不會讓框框爆掉 */
+            font-family: inherit;
+        }
+        
+        .submit-review-btn {
+            background-color: #333; /* 與你的加入購物車按鈕同色系 */
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        
+        .submit-review-btn:hover {
+            background-color: #555;
+        }
