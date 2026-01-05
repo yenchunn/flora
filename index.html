@@ -158,13 +158,22 @@
             <p>© 2024 FLORA. All Rights Reserved.</p>
             <p>用心栽培每一份綠意，溫柔守護每個空間</p>
             <div class="footer-links">
-                <a href="#privacy">隱私權政策</a>
-                <a href="#terms">服務條款</a>
-                <a href="#contact">聯絡我們</a>
+                <a href="#" onclick="openModal('privacy')">隱私權政策</a>
+                <a href="#" onclick="openModal('terms')">服務條款</a>
+                <a href="mailto:FLORAservice@gmail.com">聯絡我們</a>
             </div>
-        </div>
     </footer>
+
+    <!-- Modal 背景 -->
+    <div id="modalOverlay" class="modal-overlay" onclick="closeModal()"></div>
     
+    <!-- Modal 內容 -->
+    <div id="modalBox" class="modal-box">
+      <h2 id="modalTitle"></h2>
+      <p id="modalContent"></p>
+      <button onclick="closeModal()">關閉</button>
+    </div>
+
     <!-- ✅ 修正：正確的載入順序，不要重複 -->
     <script src="cart.js"></script>
     <script src="script.js"></script>
