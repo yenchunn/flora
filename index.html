@@ -61,33 +61,44 @@
     </header>   
 
  
-    <!-- Hero Section -->
+    <!-- Hero Section - 輪播廣告 -->
     <section class="hero">
         <div class="carousel-container">
+            <!-- 左右切換按鈕 -->
             <button class="carousel-prev" onclick="moveSlide(-1)">❮</button>
             <button class="carousel-next" onclick="moveSlide(1)">❯</button>
     
             <div class="carousel-wrapper">
+                <!-- 廣告 1 -->
                 <div class="carousel-slide active">
                     <a href="product page/seasonal.html">
-                    <img src="images/動態廣告1.png">
+                        <img src="images/動態廣告1.png" alt="季節限定">
                     </a>
                 </div>
+                
+                <!-- 廣告 2 - 帶有點擊區域 -->
                 <div class="carousel-slide">
-                    <img src="images/動態廣告2.png" usemap="#flora-map">
-                <map name="flora-map">
-                    <area shape="rect" coords="964,946,571,354" href="product page/soil.html" alt="介質肥料" title="介質肥料">
-                    
-                    <area shape="rect" coords="1066,360,1516,910" href="product page/tools.html" alt="工具" title="工具">
-                    
-                    <area shape="rect" coords="1589,347,2108,984" href="product page/plant.html" alt="植物" title="植物">
-                </map>
-            </div>
+                    <img src="images/動態廣告2.png" usemap="#flora-map" alt="植物養護">
+                    <map name="flora-map">
+                        <area shape="rect" coords="571,354,964,946" href="product page/soil.html" alt="介質肥料" title="介質肥料">
+                        <area shape="rect" coords="1066,360,1516,910" href="product page/tools.html" alt="工具" title="工具">
+                        <area shape="rect" coords="1589,347,2108,984" href="product page/plant.html" alt="植物" title="植物">
+                    </map>
+                </div>
+                
+                <!-- 廣告 3 -->
                 <div class="carousel-slide">
                     <a href="product page/accessories.html">
-                    <img src="images/動態廣告3.png">
+                        <img src="images/動態廣告3.png" alt="療癒小物">
                     </a>
                 </div>
+            </div>
+            
+            <!-- 指示點（可選） -->
+            <div class="carousel-indicators">
+                <span class="dot active" onclick="currentIndex = 0; moveSlide(0);"></span>
+                <span class="dot" onclick="currentIndex = 1; moveSlide(0);"></span>
+                <span class="dot" onclick="currentIndex = 2; moveSlide(0);"></span>
             </div>
         </div>
     </section>
