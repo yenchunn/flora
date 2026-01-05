@@ -213,3 +213,25 @@ function validateAndRegister() {
     alert("註冊成功！歡迎來到 FLORA");
     window.location.href = 'index.html'; 
 }
+
+
+function openModal(type) {
+  const title = document.getElementById("modalTitle");
+  const content = document.getElementById("modalContent");
+
+  if (type === "privacy") {
+    title.innerText = "隱私權政策";
+    content.innerText = "本網站將妥善保護您的個人資料，僅用於服務用途，不會任意提供給第三方。";
+  } else if (type === "terms") {
+    title.innerText = "服務條款";
+    content.innerText = "使用本網站即表示您同意遵守本平台之相關規範與使用條款。";
+  }
+
+  document.getElementById("modalOverlay").style.display = "block";
+  document.getElementById("modalBox").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("modalOverlay").style.display = "none";
+  document.getElementById("modalBox").style.display = "none";
+}
