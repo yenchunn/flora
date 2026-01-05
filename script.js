@@ -221,17 +221,28 @@ function openModal(type) {
 
   if (type === "privacy") {
     title.innerText = "隱私權政策";
-    content.innerText = "本網站將妥善保護您的個人資料，僅用於服務用途，不會任意提供給第三方。";
-  } else if (type === "terms") {
+    content.innerHTML = `
+      <img src="images/policy/privacy1.jpg" class="policy-img">
+      <img src="images/policy/privacy2.jpg" class="policy-img">
+      <p>
+        本網站重視您的隱私權，僅於提供服務之必要範圍內蒐集使用者資料，
+        並採取合理之安全措施進行保護，不會任意提供予第三方。
+      </p>
+    `;
+  } 
+  else if (type === "terms") {
     title.innerText = "服務條款";
-    content.innerText = "使用本網站即表示您同意遵守本平台之相關規範與使用條款。";
+    content.innerHTML = `
+      <img src="images/policy/terms1.jpg" class="policy-img">
+      <img src="images/policy/terms2.jpg" class="policy-img">
+      <p>
+        使用本網站即表示您同意遵守本平台之所有使用規範，
+        如有違反，本網站有權限制或終止相關服務。
+      </p>
+    `;
   }
 
   document.getElementById("modalOverlay").style.display = "block";
   document.getElementById("modalBox").style.display = "block";
 }
 
-function closeModal() {
-  document.getElementById("modalOverlay").style.display = "none";
-  document.getElementById("modalBox").style.display = "none";
-}
