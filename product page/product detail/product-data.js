@@ -612,4 +612,5 @@ const products = {
             textInput.value = "";
             
             alert("評論已送出！");
-        }
+        };
+
